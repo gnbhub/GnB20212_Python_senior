@@ -282,3 +282,43 @@ pandas.core.frame.DataFrame
 ```
 리스트를 ndarray로 변환하여 DataFrame으로 바꿀수도 있고 리스트 그대로 DataFrame으로 바꿀수 있음을 확인할 수 있다.
 
+#### dict to DataFrame
+dict의 Key에는 columns의 이름을 쓰고, 해당 column의 값들을 List, numpy array 또는 panda Series의 자료형으로 사전의 value에 넣어주면 된다.
+```python
+dict = {
+    'A' : ['a1', 'a2', 'a3'],
+    'B' : ['b1', 'b2', 'b3'],
+    'C' : ['c1', 'c2', 'c3']
+}
+df = pd.DataFrame(dict)
+df
+```
+![image](https://user-images.githubusercontent.com/79446573/135753077-934f6361-1cf3-41a3-afa0-3d7ee0835474.png)
+```python
+type(dict)
+```
+```python
+dict
+```
+```python
+type(df)
+```
+```python
+pandas.core.frame.DataFrame
+```
+
+#### 원소 형변환
+특정 요소의 자료형을 변환하기 위해서 astype 메소드를 사용한다.
+```python
+df = pd.DataFrame([True, True, False, False, True])
+type(df)
+```
+```python
+pandas.core.frame.DataFrame
+```
+```python
+df = df.astype(int)
+df
+```
+![image](https://user-images.githubusercontent.com/79446573/135753265-d3bcbf6b-425a-4a52-aab0-7a7ce18bc97a.png)
+<br> 부울 타입 원소들이 정수형으로 변환된것을 확인할 수 있다.
