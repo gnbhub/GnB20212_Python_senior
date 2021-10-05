@@ -322,3 +322,6 @@ df
 ```
 ![image](https://user-images.githubusercontent.com/79446573/135753265-d3bcbf6b-425a-4a52-aab0-7a7ce18bc97a.png)
 <br> 부울 타입 원소들이 정수형으로 변환된것을 확인할 수 있다.
+
+## HW 1
+week1 폴더 내의 hw1파일을 확인하여 따라 작성해보기! Ln(3) 이후의 코드에 대해 다 알려 하지 않아도 좋음.
