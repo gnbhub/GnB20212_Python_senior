@@ -8,7 +8,7 @@ comma separated values, 표 형태의 데이터를 말 그대로 (,)로 구분�
 이런 특징 때문에 DB에서 csv를 다루는 일이 많은데 pandas 모듈은 csv파일을 파이썬에서 읽을 수 있도록 한다.
 
 ## csv파일 불러오기
-![image](https://user-images.githubusercontent.com/79446573/136019505-a7b3bb9e-7cc8-4512-ab01-f42d141b5c44.png)
+<img src="https://user-images.githubusercontent.com/79446573/136019505-a7b3bb9e-7cc8-4512-ab01-f42d141b5c44.png" width="50%" height="50%"></html>
 <br> 구글 코랩 기준으로 파일 업로드를 통하여 런타임에서 파일에 접근할 수 있도록 한다.
 <br> 구글 드라이브에 저장해놓고 접근하여도 되고, 코랩 외의 환경이라면 Pc 저장소에서 불러올 수도 있다.
 <br> sample.csv파일을 업로드한다.
@@ -17,10 +17,11 @@ import pandas as pd
 df = pd.read_csv('sample.csv') # ' ' 안에 경로가 들어가면 된다. ex 구글 드라이브or pc 저장소 파일위치
 ```
 pd의 read_scv메소드를 이용하여 csv파일을 불러오면 바로 DataFrame type이 된다.<br>
-![image](https://user-images.githubusercontent.com/79446573/136019888-6cd595d9-8191-41ac-89c4-4b8d486e0c28.png)
+<img src="https://user-images.githubusercontent.com/79446573/136019888-6cd595d9-8191-41ac-89c4-4b8d486e0c28.png" width="30%" height="30%"></html>
+
 ### csv파일 내에 column이 지정되어 있지 않은 경우
 csv 파일의 첫줄을 column의 이름들로 받아들이는데, 열 이름이 없다면 다음과 같이 인자를 추가한다.<br>
-![image](https://user-images.githubusercontent.com/79446573/136020204-0ff899c4-e141-447e-aa72-ccfb2c71fb91.png)
+<img src="https://user-images.githubusercontent.com/79446573/136020204-0ff899c4-e141-447e-aa72-ccfb2c71fb91.png" width="30%" height="30%"></html>
 ```python
 df = pd.read_csv('sample.csv', header = None)
 df
@@ -29,7 +30,7 @@ df
 
 ### csv 파일 내에 행의 이름이 존재하는 경우
 아무 인자가 없다면 0부터 줄마다 번호가 매겨지는데 파일에 index가 작성되어 있다면 다음과 같이 인자를 추가한다.
-![image](https://user-images.githubusercontent.com/79446573/136022411-9b81b26f-4283-410a-8f47-7ba1a168e2d3.png)
+<img src="https://user-images.githubusercontent.com/79446573/136022411-9b81b26f-4283-410a-8f47-7ba1a168e2d3.png" width="30%" height="30%"></html>
 ```python
 df = pd.read_csv('sample.csv', index_col = 0)
 df
@@ -40,43 +41,43 @@ df
 DataFrame에서 필요한 Data만을 선택하여 제어하기 위한 인덱싱을 알아보자.
 ### loc 메소드
 loc 메소드를 사용하여 원하는 위치의 데이터를 가지고 올 수있다.<br>
-![image](https://user-images.githubusercontent.com/79446573/136557280-8e81525b-94e7-4cdd-95fc-18583c417b11.png)
+<img src="https://user-images.githubusercontent.com/79446573/136557280-8e81525b-94e7-4cdd-95fc-18583c417b11.png" width="30%" height="30%"></html>
 ```python
 df.loc['A1', 'D'] # A1 row의 D 컬럼에 해당하는 데이터 불러오기
 ```
 ### iloc 메소드
 특정 행과 열을 숫자로 인덱싱 할 수 있다.<br>
-![image](https://user-images.githubusercontent.com/79446573/136557641-69f06073-040e-4678-be1b-8c06007ee60f.png)
+<img src="https://user-images.githubusercontent.com/79446573/136557641-69f06073-040e-4678-be1b-8c06007ee60f.png" width="30%" height="30%"></html>
 ```python
 df.iloc[1, 3]  # 1번 row의 3번 컬럼 데이터, 첫째 줄 3번째 열 데이터가 아니다! 둘째 줄 4번째 열 데이터다!
 ```
 ### 특정 row의 data 모두 출력
 인덱싱을 :를 이용하면 원하는 부분을 출력할 수 있는데, 숫자 없이 `:`만 사용하면 해당되는모두를 가리키는 것이다.<br>
-![image](https://user-images.githubusercontent.com/79446573/136558366-aef5777f-c898-4e0b-8ec1-a3ed268757ee.png)
+<img src="https://user-images.githubusercontent.com/79446573/136558366-aef5777f-c898-4e0b-8ec1-a3ed268757ee.png" width="30%" height="30%"></html>
 ```python
 df.loc['A2', : ]  # A2 행의 모든 data 출력
 ```
 ### 특정 column의 data 모두 출력
 앞에서는 `,` 뒤에 `:`를 사용했다면 `,`앞에 :를 사용하여 column에 해당하는 data 모두를 가리킨다.<br>
-![image](https://user-images.githubusercontent.com/79446573/136558888-d13019d3-a55d-408f-9469-273c7674047a.png)
+<img src="https://user-images.githubusercontent.com/79446573/136558888-d13019d3-a55d-408f-9469-273c7674047a.png" width="30%" height="30%"></html>
 ```python
 df.loc[:, 'E']  # E 열의 모든 data 출력
 ```
 ### 여러개의 column data 출력
 여러개의 열을 선택하고 싶다면 `[ ]`사이에 배열처럼 입력해 줄 수 있다.<br>
-![image](https://user-images.githubusercontent.com/79446573/136559258-a7b4fb0e-4ebd-4cf6-b95d-b191b7b756b3.png)
+<img src="https://user-images.githubusercontent.com/79446573/136559258-a7b4fb0e-4ebd-4cf6-b95d-b191b7b756b3.png" width="30%" height="30%"></html>
 ```python
 df.loc[ : , ['C','D']]  # C,D column 모든 data출력
 ```
 ### column row slicing
 `:`를 활용하여 모든 data를 가리도록 하였는데, 좌 우에 행이나 열의 이름이 들어가면 slicing이 가능하다.
 #### 행 슬라이싱
-![image](https://user-images.githubusercontent.com/79446573/136561840-7b9c2a0e-8955-4fc7-857f-0d17500b2542.png)
+<img src="https://user-images.githubusercontent.com/79446573/136561840-7b9c2a0e-8955-4fc7-857f-0d17500b2542.png" width="30%" height="30%"></html>
 ```python
 df.loc['A2':,:] # , 좌측을 보면 'A2': 라 되어있는데 A2행 부터 모든 행을 선택한다.
 ```
 #### 열 슬라이싱
-![image](https://user-images.githubusercontent.com/79446573/136562278-22f3bb26-7bcf-4ccb-bf4d-2be60b4fc48a.png)
+<img src="https://user-images.githubusercontent.com/79446573/136562278-22f3bb26-7bcf-4ccb-bf4d-2be60b4fc48a.png" width="30%" height="30%"></html>
 ```python
 df.loc[:, 'B':'D'] # , 우측에 'B':'D' 라 되어있는데 B열 부터 D열까지 선택한다.
 ```
@@ -84,7 +85,7 @@ loc 뿐만 아니라 iloc 메소드도 동일한 방법으로 슬라이싱 할 �
 
 ### 데이터 변경하기
 위에서 보았던 loc 메소드나 iloc 메소드를 이용해서 원하는 위치를 정하고 data를 변경할 수 있다.<br>
-![image](https://user-images.githubusercontent.com/79446573/136563631-10344cd3-be78-42b6-bfe8-88cad1d605f5.png)
+<img src="https://user-images.githubusercontent.com/79446573/136563631-10344cd3-be78-42b6-bfe8-88cad1d605f5.png" width="30%" height="30%"></html>
 ```python
 import pandas as pd
 df = pd.read_csv('sample2.csv', index_col = 0)
@@ -97,13 +98,14 @@ df
 #### row의 모든 데이터 변경하기
 특정 행의 data 모두를 바꾸고 싶다면 다음과 같이 작성하면 된다.
 <br> 행의 원소 갯수에 맞추어서 바꾸고 싶은 값을 선언하면 된다.<br>
-![image](https://user-images.githubusercontent.com/79446573/136564365-58f852ee-426b-448f-894f-8941cc44aa1a.png)
+<img src="https://user-images.githubusercontent.com/79446573/136564365-58f852ee-426b-448f-894f-8941cc44aa1a.png" width="30%" height="30%"></html>
+
 ```python
 df.loc['R2'] = ['K1', 'K2', 'K3', 'K4', 'K5', 'K6'] #R2 행의 데이터를 교환한다. 갯수가 맞아야 한다!
 df
 ```
 #### column의 모든 데이터 변경하기
-![image](https://user-images.githubusercontent.com/79446573/136564619-1170309a-89ae-4fc5-a961-cf4f1ecff2d3.png)
+<img src="https://user-images.githubusercontent.com/79446573/136564619-1170309a-89ae-4fc5-a961-cf4f1ecff2d3.png" width="30%" height="30%"></html>
 ```python
 df.loc[:, 'D'] = ['K1', 'K2', 'K3', 'K4'] # D열의 데이터를 교환한다. 갯수가 맞아야 한다!
 df
@@ -112,7 +114,7 @@ df
 
 #### ※동일하게 값을 지정하고 싶을 때
 행이나 열의 데이터를 모두 동일하게 바꾸고 싶다면 바꾸고자 하는 데이터를 대입하면 된다.<br>
-![image](https://user-images.githubusercontent.com/79446573/136565027-cec0efec-be8d-49b5-acdb-31d5ff255069.png)
+<img src="https://user-images.githubusercontent.com/79446573/136565027-cec0efec-be8d-49b5-acdb-31d5ff255069.png" width="30%" height="30%"></html>
 ```python
 df.loc[:, 'D'] = 'K' # D열의 데이터를 모두 'K'로 바꾼다.
 df
@@ -122,7 +124,7 @@ row도 똑같이 바꿀수 있다.
 ### 대이터 추가 삭제
 #### 행 추가
 없는 행을 지정하여 데이터를 쓰면 새롭게 행이 추가된다.<br>
-![image](https://user-images.githubusercontent.com/79446573/136566285-faadf18e-b077-499c-865f-83280817163e.png)
+<img src="https://user-images.githubusercontent.com/79446573/136566285-faadf18e-b077-499c-865f-83280817163e.png" width="30%" height="30%"></html>
 ```python
 df.loc['R5'] = ['A5', 'B5', 'C5', 'D5', 'E5', 'F5'] # R5가 없다면 새로 생성될 것이고 있으면 R5값이 변경될 것이다.
 df
@@ -133,11 +135,11 @@ df
 drop() 메소드를 사용하여 행이나 열을 삭제할 수 있다.<br>
 행을 삭제하고 싶다면 axis 인자의 값을 'index' 또는 0으로, 열을 삭제하고 싶다면 axis인자의 값을 'columns' 또는 1로 설정하면 된다.<br>
 만일 df 변경하고 싶다면 inplace=True로 해주어야 한다. False라면 df값은 변하지않는다.<br>
-![image](https://user-images.githubusercontent.com/79446573/136567744-2b543db9-9d88-46f6-9695-e73da161223d.png)
+<img src="https://user-images.githubusercontent.com/79446573/136567744-2b543db9-9d88-46f6-9695-e73da161223d.png" width="30%" height="30%"></html>
 ```python
 df.drop('R3', axis='index', inplace=False) # axis가 index이므로 R3에 해당하는 행 삭제
 ```
-![image](https://user-images.githubusercontent.com/79446573/136569404-c7924d24-3024-4070-a450-1a5122e1f3bf.png)
+<img src="https://user-images.githubusercontent.com/79446573/136569404-c7924d24-3024-4070-a450-1a5122e1f3bf.png" width="30%" height="30%"></html>
 ```python
 df.drop('E', axis=1, inplace=False) # axis가 1이므로 E에 해당하는 열 삭제
 ```
