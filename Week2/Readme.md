@@ -147,6 +147,7 @@ df.drop('E', axis=1, inplace=False) # axis가 1이므로 E에 해당하는 열 �
 ## Quiz
 <img src = "https://user-images.githubusercontent.com/79446573/136914740-f0ea8f8f-fb80-448c-a5d3-cea3047a5e27.png" width = "40%" height = "40%"></html>
 <br>다음과 같은 DataFrame을 아래 사진처럼 만들기<br>
+n번째 행 n번째 열의 원소를 1로 설정하기<br>
 <img src = "https://user-images.githubusercontent.com/79446573/136915112-b0a962e8-2b39-4193-abc5-7a24d02a110e.png" width = "40%" height = "40%"></html>
 <br>물론 행과 열을 동시에 다루는 일은 잘 없겠지만, 내용 학습으로 간단하게 해볼만해서 올립니다. 수동으로 바꾸기 금지
 
