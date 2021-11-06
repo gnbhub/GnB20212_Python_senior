@@ -121,7 +121,7 @@ df
 ```
 row도 똑같이 바꿀수 있다.
 
-### 대이터 추가 삭제
+### 데이터 추가/ 삭제
 #### 행 추가
 없는 행을 지정하여 데이터를 쓰면 새롭게 행이 추가된다.<br>
 <img src="https://user-images.githubusercontent.com/79446573/136566285-faadf18e-b077-499c-865f-83280817163e.png" width="30%" height="30%"></html>
